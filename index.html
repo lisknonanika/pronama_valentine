@@ -46,7 +46,7 @@
             pa.appendChild(ch);
             body.appendChild(pa);
 
-            // DOMが増えすぎないように適宜削除する
+            // 不要になったものを削除したり
             domlist.push({ dom: pa, duration: duration * 1000, start: new Date().getTime() });
             domlist.forEach((data) => { if (new Date().getTime() - data.start > data.duration) body.removeChild(data.dom); });
             domlist = domlist.filter((data) => { return new Date().getTime() - data.start < data.duration; });
