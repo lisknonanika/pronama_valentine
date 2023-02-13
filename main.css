@@ -5,6 +5,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom right, #c28785, 15%, #f8aaaa, 20%, #6d3e22);
+    overflow: hidden;
 }
 
 #pronama {
