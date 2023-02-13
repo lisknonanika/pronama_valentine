@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #c28785, 15%, #f8aaaa, 20%, #6d3e22);
+}
+
+#pronama {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("./pronama.png") no-repeat center center;
+    background-size: contain;
+}
+
+.heart1,
+.heart2,
+.heart3,
+.heart4,
+.heart5 {
+    position: relative;
+    width: 100px;
+    height: 80px;
+}
+
+.heart1::before,
+.heart1::after,
+.heart2::before,
+.heart2::after,
+.heart3::before,
+.heart3::after,
+.heart4::before,
+.heart4::after,
+.heart5::before,
+.heart5::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 100%;
+    border-radius: 50px 50px 0 0;
+}
+
+.heart1::before,
+.heart2::before,
+.heart3::before,
+.heart4::before,
+.heart5::before {
+    left: 50%;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart1::after,
+.heart2::after,
+.heart3::after,
+.heart4::after,
+.heart5::after {
+    right: 50%;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+.heart1::before,
+.heart1::after {
+    background-color: #693622;
+}
+
+.heart2::before,
+.heart2::after {
+    background-color: #c2907c;
+}
+
+.heart3::before,
+.heart3::after {
+    background-color: #f0d5ca;
+}
+
+.heart4::before,
+.heart4::after {
+    background-color: #f3c2f0;
+}
+
+.heart5::before,
+.heart5::after {
+    background-color: #e26c6c;
+}
+
+@keyframes updown {
+    from {
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+.anime {
+    animation-name: updown;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
