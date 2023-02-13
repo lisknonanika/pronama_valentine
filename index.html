@@ -20,10 +20,15 @@
         ]
         let domlist = [];
         setInterval(() => {
+            // bodyの設定
             const body = document.querySelector("body");
             const size = sizelist[Math.floor(Math.random() * sizelist.length)]; // サイズ設定
             const left = Math.floor(Math.random() * (document.documentElement.clientWidth - size.width));  // 位置
             const duration = Math.floor(Math.random() * 5) + 2; // 落ちる時間
+
+            // body設定
+            body.width = document.documentElement.clientWidth;
+            body.height = document.documentElement.clientHeight;
 
             // box設定
             const pa = document.createElement('div');
